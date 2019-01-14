@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>Registre-se - Personal Bot</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6, form {
+            font-family: "Lato", sans-serif
+        }
+
+        .w3-bar, h1, button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        #idDados {
+            color:black;
+            padding: 0px 450px 0px 450px;
+        }
+
+        table {
+            background-color:white;
+            padding:0px 450px 0px 450px;  
+            opacity:0.8;
+        }
+
+        fieldset {
+            opacity: 0.8;
+            background-color:white;
+        }
+        
+        legend {
+            opacity: 1;
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="w3-top">
+        <div class="w3-bar w3-red w3-card w3-left-align w3-large">
+            <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+            <a href="Inicio.html" class="w3-bar-item w3-button w3-padding-large w3-white">Inicio</a>
+            <a href="Sobre_nos.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Sobre Nós</a>
+            <a href="Bot.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Converse com o bot</a>
+            <a href="Login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+            <a href="Registro.html" class="w3-bar-item w3-button w3-padding-large">Registre-se</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+            <a href="Sobre_nos.html" class="w3-bar-item w3-button w3-padding-large">Sobre Nós</a>
+            <a href="Bot.html" class="w3-bar-item w3-button w3-padding-large">Converse com o bot</a>
+            <a href="Login.html" class="w3-bar-item w3-button w3-padding-large">Login</a>
+            <a href="Registro.html" class="w3-bar-item w3-button w3-padding-large">Registre-se</a>
+        </div>
+    </div>
+    <div class="w3-container w3-red w3-center" style="padding:128px 16px">
+        <h1>REGISTRE - SE</h1>
+        <form action="registro.php" method="post" id="idDados">
+
+            <!-- DADOS PESSOAIS-->
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <table cellspacing="10">
+                    <tr>
+                        <td>
+                            <label for="nome"> Nome: </label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="nome" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label> Nascimento: </label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="dia" size="2" maxlength="2" value="dd" required>
+                            <input type="text" name="mes" size="2" maxlength="2" value="mm" required>
+                            <input type="text" name="ano" size="4" maxlength="4" value="aaaa" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="rg"> RG: </label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="rg" size="8" maxlength="8" required> - <input type="text" name="rg" size="1" maxlength="1" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label> CPF:</label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="cpf" size="9" maxlength="9" required> - <input type="text" name="cpf2" size="2" maxlength="2" required>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <br />
+           
+
+            <!-- DADOS DE LOGIN -->
+            <fieldset>
+                <legend>Dados de login</legend>
+                <table cellspacing="10">
+                    <tr>
+                        <td>
+                            <label for="email"> E-mail: </label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="imagem"> Imagem de perfil:</label>
+                        </td>
+                        <td>
+                            <input type="file" name="imagem" required>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="login"> Login de usuário: </label>
+                        </td>
+                        <td align="left">
+                            <input type="text" name="login">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pass"> Senha: </label>
+                        </td>
+                        <td align="left">
+                            <input type="password" name="pass">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="passconfirm"> Confirme a senha: </label>
+                        </td>
+                        <td align="left">
+                            <input type="password" name="passconfirm">
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <br />
+            <input type="submit">
+            <input type="reset" value="Limpar">
+        </form>
+    </div>
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+        <div class="w3-xlarge w3-padding-32">
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
+        </div>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </footer>
+</body>
+</html>
